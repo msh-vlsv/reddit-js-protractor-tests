@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "arrowFunctions": true
+    }
+  },
+  "rules": {
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"]
+  },
+  "globals": {
+    "__dirname": "readonly",
+    "import": "readonly"
+  }
+}

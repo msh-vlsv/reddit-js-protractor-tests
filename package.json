@@ -1,0 +1,26 @@
+{
+  "name": "reddit-js-protractor-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msh-vlsv/reddit-js-protractor-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msh-vlsv/reddit-js-protractor-tests/issues"
+  },
+  "homepage": "https://github.com/msh-vlsv/reddit-js-protractor-tests#readme",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "protractor": "^5.4.2"
+  }
+}
