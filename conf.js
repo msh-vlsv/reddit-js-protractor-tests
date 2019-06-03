@@ -4,7 +4,7 @@ let HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 let reporter = new HtmlScreenshotReporter({
     dest: 'target/screenshots',
     filename: 'reddit-test-report.html',
-    reportTitle: "Reddit Test Report"
+    reportTitle: 'Reddit Test Report'
   });
 
 exports.config = {
@@ -47,7 +47,7 @@ exports.config = {
                 displayDuration: false
               }
           })),
-          jasmine.getEnv().addReporter(reporter)
+          jasmine.getEnv().addReporter(reporter);
     },
 
     afterLaunch: function(exitCode) {
@@ -57,7 +57,8 @@ exports.config = {
     },
 
     specs: [
-        './test/*.js'
+        './test/front.spec.js',
+        './test/CRUD_post.spec.js',
     ],
 
     jasmineNodeOpts: {
@@ -66,4 +67,4 @@ exports.config = {
         defaultTimeoutInterval: 360000,
         print: function() {}
     }
-}
+};

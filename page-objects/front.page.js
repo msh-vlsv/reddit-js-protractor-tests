@@ -9,9 +9,10 @@ class FrontPage {
         this.signInButton = element(by.className('AnimatedForm__submitButton'));
         this.usernameErrorMessage = element(by.css('fieldset.AnimatedForm__field.login > div.AnimatedForm__errorMessage'));
         this.passwordErrorMessage = element(by.css('fieldset.AnimatedForm__field.password > div.AnimatedForm__errorMessage'));
+        this.successfullyLoggedInPopupMessage = element(by.xpath('//span[text()="Successfully logged in!"]'));
         this.username = element(by.css('button#USER_DROPDOWN_ID > div > div > div > div'));
-        this.successfullyLoggedInPopupMessage = element(by.css('span.cu1hzx-0.hGBqWo'));
-    
+        this.myProfileButton = element(by.css('a[href = "/user/beam_test"]'));
+        this.createPostButton = element(by.css('button[aria-label="Create Post"]'));
     }
 
     open() {
@@ -52,6 +53,16 @@ class FrontPage {
         browser.wait(ExpectedConditions.visibilityOf(this.successfullyLoggedInPopupMessage), 5000);
         return this.successfullyLoggedInPopupMessage.getText();
     }
+
+    clickCreatePostButton() {
+        this.createPostButton.click();
+    }
+
+    openMyProfilePage() {
+        this.username.click();
+        this.myProfileButton.click();
+    }
+
 }
 
-module.exports = FrontPage
+module.exports = FrontPage;
